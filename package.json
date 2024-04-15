@@ -1,5 +1,13 @@
 {
+	"author": {
+		"email": "Land@Playform.Cloud",
+		"name": "Land",
+		"url": "HTTPS://Land.Playform.Cloud"
+	},
 	"bin": "src-gen/backend/main.js",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/TauriTheia/issues"
+	},
 	"dependencies": {
 		"@theia/callhierarchy": "1.48.3",
 		"@theia/file-search": "1.48.3",
@@ -17,16 +25,27 @@
 	},
 	"devDependencies": {
 		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6",
 		"@theia/cli": "1.48.3",
 		"execa": "8.0.1",
 		"pkg": "https://github.com/geekuillaume/pkg.git",
 		"tauri": "0.15.0"
 	},
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/TauriTheia#readme",
+	"license": "SEE LICENSE IN LICENSE",
 	"name": "theia",
 	"pkg": {
 		"assets": [
 			"lib/**/*"
 		]
+	},
+	"private": false,
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/TauriTheia.git"
 	},
 	"resolutions": {
 		"@theia/application-package": "./theia-application-package-custom.tgz",
@@ -52,5 +71,7 @@
 		"vscode-builtin-typescript": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/typescript-1.39.1-prel.vsix",
 		"vscode-builtin-typescript-language-features": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/typescript-language-features-1.39.1-prel.vsix"
 	},
-	"theiaPluginsDir": "plugins"
+	"theiaPluginsDir": "plugins",
+	"type": "module",
+	"version": "0.0.1"
 }
