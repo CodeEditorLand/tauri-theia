@@ -1,5 +1,36 @@
 {
+	"name": "theia",
+	"version": "0.0.1",
+	"private": false,
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/TauriTheia#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/TauriTheia/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/TauriTheia.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Land",
+		"email": "Land@Playform.Cloud",
+		"url": "HTTPS://Land.Playform.Cloud"
+	},
+	"type": "module",
 	"bin": "src-gen/backend/main.js",
+	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
+		"prepare": "yarn theia:clean && yarn theia:build && yarn theia:download:plugins",
+		"prepublishOnly": "Build 'Source/**/*.ts'",
+		"theia:build": "theia build",
+		"theia:clean": "theia clean",
+		"theia:download:plugins": "theia download:plugins",
+		"theia:package": "pkg package.json -t node10 --output src-tauri/theia-binaries/theia && node ./move-binaries.js"
+	},
+	"resolutions": {
+		"@theia/application-package": "./theia-application-package-custom.tgz",
+		"vscode-ripgrep": "./vscode-ripgrep-custom.tgz"
+	},
 	"dependencies": {
 		"@theia/callhierarchy": "1.48.3",
 		"@theia/file-search": "1.48.3",
@@ -17,29 +48,19 @@
 	},
 	"devDependencies": {
 		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6",
 		"@theia/cli": "1.48.3",
 		"execa": "8.0.1",
 		"pkg": "https://github.com/geekuillaume/pkg.git",
 		"tauri": "0.15.0"
 	},
-	"name": "theia",
+	"publishConfig": {
+		"access": "public"
+	},
 	"pkg": {
 		"assets": [
 			"lib/**/*"
 		]
-	},
-	"resolutions": {
-		"@theia/application-package": "./theia-application-package-custom.tgz",
-		"vscode-ripgrep": "./vscode-ripgrep-custom.tgz"
-	},
-	"scripts": {
-		"Document": "Document 'Source/**/*.ts'",
-		"prepare": "yarn theia:clean && yarn theia:build && yarn theia:download:plugins",
-		"prepublishOnly": "Build 'Source/**/*.ts'",
-		"theia:build": "theia build",
-		"theia:clean": "theia clean",
-		"theia:download:plugins": "theia download:plugins",
-		"theia:package": "pkg package.json -t node10 --output src-tauri/theia-binaries/theia && node ./move-binaries.js"
 	},
 	"theiaPlugins": {
 		"vscode-builtin-css": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/css-1.39.1-prel.vsix",
