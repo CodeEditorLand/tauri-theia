@@ -34,9 +34,7 @@
 		"tauri": "0.15.0"
 	},
 	"pkg": {
-		"assets": [
-			"lib/**/*"
-		]
+		"assets": ["lib/**/*"]
 	},
 	"theiaPlugins": {
 		"vscode-builtin-css": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/css-1.39.1-prel.vsix",
