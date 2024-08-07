@@ -30,4 +30,6 @@ panic = "abort"
 codegen-units = 1
 lto = true
 incremental = false
-opt-level = "z"
+opt-level = 3
+debug = false
+strip = true
