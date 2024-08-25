@@ -1,22 +1,22 @@
 {
 	"bin": "src-gen/backend/main.js",
 	"dependencies": {
-		"@theia/callhierarchy": "1.53.0-next.6",
-		"@theia/file-search": "1.53.0-next.6",
-		"@theia/git": "1.53.0-next.6",
+		"@theia/callhierarchy": "1.53.0-next.18",
+		"@theia/file-search": "1.53.0-next.18",
+		"@theia/git": "1.53.0-next.18",
 		"@theia/json": "1.4.0-next.e4d87c7c",
-		"@theia/markers": "1.53.0-next.6",
-		"@theia/messages": "1.53.0-next.6",
-		"@theia/mini-browser": "1.53.0-next.6",
-		"@theia/navigator": "1.53.0-next.6",
-		"@theia/outline-view": "1.53.0-next.6",
-		"@theia/preferences": "1.53.0-next.6",
-		"@theia/preview": "1.53.0-next.6",
-		"@theia/search-in-workspace": "1.53.0-next.6",
-		"@theia/terminal": "1.53.0-next.6"
+		"@theia/markers": "1.53.0-next.18",
+		"@theia/messages": "1.53.0-next.18",
+		"@theia/mini-browser": "1.53.0-next.18",
+		"@theia/navigator": "1.53.0-next.18",
+		"@theia/outline-view": "1.53.0-next.18",
+		"@theia/preferences": "1.53.0-next.18",
+		"@theia/preview": "1.53.0-next.18",
+		"@theia/search-in-workspace": "1.53.0-next.18",
+		"@theia/terminal": "1.53.0-next.18"
 	},
 	"devDependencies": {
-		"@theia/cli": "1.53.0-next.6",
+		"@theia/cli": "1.53.0-next.18",
 		"execa": "9.3.1",
 		"pkg": "https://github.com/geekuillaume/pkg.git",
 		"tauri": "0.15.0"
