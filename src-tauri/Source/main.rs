@@ -1,9 +1,13 @@
-#![cfg_attr(all(not(debug_assertions), target_os = "windows"), windows_subsystem = "windows")]
+#![cfg_attr(
+	all(not(debug_assertions), target_os = "windows"),
+	windows_subsystem = "windows"
+)]
 
 use std::{
 	io::{BufRead, BufReader},
 	process::{Command, Stdio},
 };
+
 use tauri::Handle;
 mod cmd;
 
@@ -21,7 +25,7 @@ fn main() {
 }
 
 // Takes the name of the binary and returns the full path to its location
-fn get_bin_command(name: &str) -> String {
+fn get_bin_command(name:&str) -> String {
 	tauri::api::command::relative_command(
 		tauri::api::command::binary_command(name.to_string()).unwrap(),
 	)
@@ -29,7 +33,7 @@ fn get_bin_command(name: &str) -> String {
 }
 
 // Spawns Theia server and loads url in webview
-fn spawn_theia_server<T: 'static>(handle: &Handle<T>) {
+fn spawn_theia_server<T:'static>(handle:&Handle<T>) {
 	// Get paths to orchestrator and main binary
 	let theia_binary = get_bin_command("theia");
 	let orchestrator_binary = get_bin_command("theia-orchestrator");
