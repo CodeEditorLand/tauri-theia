@@ -1,25 +1,25 @@
 {
 	"bin": "src-gen/backend/main.js",
 	"dependencies": {
-		"@theia/callhierarchy": "^1.3.0-next.2aa2fa1a",
-		"@theia/file-search": "^1.3.0-next.2aa2fa1a",
-		"@theia/git": "^1.3.0-next.2aa2fa1a",
-		"@theia/json": "^1.3.0-next.2aa2fa1a",
-		"@theia/markers": "^1.3.0-next.2aa2fa1a",
-		"@theia/messages": "^1.3.0-next.2aa2fa1a",
-		"@theia/mini-browser": "^1.3.0-next.2aa2fa1a",
-		"@theia/navigator": "^1.3.0-next.2aa2fa1a",
-		"@theia/outline-view": "^1.3.0-next.2aa2fa1a",
-		"@theia/preferences": "^1.3.0-next.2aa2fa1a",
-		"@theia/preview": "^1.3.0-next.2aa2fa1a",
-		"@theia/search-in-workspace": "^1.3.0-next.2aa2fa1a",
-		"@theia/terminal": "^1.3.0-next.2aa2fa1a"
+		"@theia/callhierarchy": "^1.54.0",
+		"@theia/file-search": "^1.54.0",
+		"@theia/git": "^1.54.0",
+		"@theia/json": "^1.3.0",
+		"@theia/markers": "^1.54.0",
+		"@theia/messages": "^1.54.0",
+		"@theia/mini-browser": "^1.54.0",
+		"@theia/navigator": "^1.54.0",
+		"@theia/outline-view": "^1.54.0",
+		"@theia/preferences": "^1.54.0",
+		"@theia/preview": "^1.54.0",
+		"@theia/search-in-workspace": "^1.54.0",
+		"@theia/terminal": "^1.54.0"
 	},
 	"devDependencies": {
-		"@theia/cli": "^1.3.0-next.2aa2fa1a",
-		"execa": "^4.0.2",
+		"@theia/cli": "^1.54.0",
+		"execa": "^9.4.0",
 		"pkg": "https://github.com/geekuillaume/pkg.git",
-		"tauri": "^0.6.2"
+		"tauri": "^0.15.0"
 	},
 	"name": "theia",
 	"pkg": {
