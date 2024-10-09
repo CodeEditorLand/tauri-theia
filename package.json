@@ -1,5 +1,17 @@
 {
+	"name": "theia",
 	"bin": "src-gen/backend/main.js",
+	"scripts": {
+		"prepare": "yarn theia:clean && yarn theia:build && yarn theia:download:plugins",
+		"theia:build": "theia build",
+		"theia:clean": "theia clean",
+		"theia:download:plugins": "theia download:plugins",
+		"theia:package": "pkg package.json -t node10 --output src-tauri/theia-binaries/theia && node ./move-binaries.js"
+	},
+	"resolutions": {
+		"@theia/application-package": "./theia-application-package-custom.tgz",
+		"vscode-ripgrep": "./vscode-ripgrep-custom.tgz"
+	},
 	"dependencies": {
 		"@theia/callhierarchy": "1.54.0",
 		"@theia/file-search": "1.54.0",
@@ -21,22 +33,10 @@
 		"pkg": "https://github.com/geekuillaume/pkg.git",
 		"tauri": "0.15.0"
 	},
-	"name": "theia",
 	"pkg": {
 		"assets": [
 			"lib/**/*"
 		]
-	},
-	"resolutions": {
-		"@theia/application-package": "./theia-application-package-custom.tgz",
-		"vscode-ripgrep": "./vscode-ripgrep-custom.tgz"
-	},
-	"scripts": {
-		"prepare": "yarn theia:clean && yarn theia:build && yarn theia:download:plugins",
-		"theia:build": "theia build",
-		"theia:clean": "theia clean",
-		"theia:download:plugins": "theia download:plugins",
-		"theia:package": "pkg package.json -t node10 --output src-tauri/theia-binaries/theia && node ./move-binaries.js"
 	},
 	"theiaPlugins": {
 		"vscode-builtin-css": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/css-1.39.1-prel.vsix",
