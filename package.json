@@ -17,7 +17,7 @@
 	},
 	"devDependencies": {
 		"@theia/cli": "1.54.0",
-		"execa": "9.5.0",
+		"execa": "9.5.1",
 		"pkg": "https://github.com/geekuillaume/pkg.git",
 		"tauri": "0.15.0"
 	},
