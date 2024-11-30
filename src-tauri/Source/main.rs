@@ -13,6 +13,7 @@ fn main() {
 		.setup(|_webview, _| {
 			// Spawn Theia server in new thread
 			let handle_clone = _webview.handle().clone();
+
 			std::thread::spawn(move || {
 				spawn_theia_server(&handle_clone);
 			});
@@ -33,6 +34,7 @@ fn get_bin_command(name:&str) -> String {
 fn spawn_theia_server<T:'static>(handle:&Handle<T>) {
 	// Get paths to orchestrator and main binary
 	let theia_binary = get_bin_command("theia");
+
 	let orchestrator_binary = get_bin_command("theia-orchestrator");
 
 	// Get stdout from binary
@@ -47,7 +49,9 @@ fn spawn_theia_server<T:'static>(handle:&Handle<T>) {
 
 	// Read stdout
 	let reader = BufReader::new(stdout);
+
 	let mut webview_started = false;
+
 	reader
     .lines()
     .filter_map(|line| line.ok())
